@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SpontaneousBibleVerses.xcodeproj">
+      location = "self:/Users/christophervillanueva/Desktop/iOS/Projects/SpontaneousBibleVerses/ReviveBible.xcodeproj">
    </FileRef>
 </Workspace>

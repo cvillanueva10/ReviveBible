@@ -37,17 +37,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		56E3279B221E794300584C8F /* SpontaneousBibleVerses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpontaneousBibleVerses.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56E3279B221E794300584C8F /* ReviveBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviveBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E3279E221E794300584C8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56E327A0221E794300584C8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		56E327A3221E794300584C8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56E327A5221E794700584C8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56E327A8221E794700584C8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56E327AA221E794700584C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56E327AF221E794700584C8F /* SpontaneousBibleVersesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpontaneousBibleVersesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56E327AF221E794700584C8F /* ReviveBibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviveBibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E327B3221E794700584C8F /* SpontaneousBibleVersesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpontaneousBibleVersesTests.swift; sourceTree = "<group>"; };
 		56E327B5221E794700584C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56E327BA221E794700584C8F /* SpontaneousBibleVersesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpontaneousBibleVersesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56E327BA221E794700584C8F /* ReviveBibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviveBibleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E327BE221E794700584C8F /* SpontaneousBibleVersesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpontaneousBibleVersesUITests.swift; sourceTree = "<group>"; };
 		56E327C0221E794700584C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E327CC2223A0A600584C8F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -93,9 +93,9 @@
 		56E3279C221E794300584C8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56E3279B221E794300584C8F /* SpontaneousBibleVerses.app */,
-				56E327AF221E794700584C8F /* SpontaneousBibleVersesTests.xctest */,
-				56E327BA221E794700584C8F /* SpontaneousBibleVersesUITests.xctest */,
+				56E3279B221E794300584C8F /* ReviveBible.app */,
+				56E327AF221E794700584C8F /* ReviveBibleTests.xctest */,
+				56E327BA221E794700584C8F /* ReviveBibleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		56E3279A221E794300584C8F /* SpontaneousBibleVerses */ = {
+		56E3279A221E794300584C8F /* ReviveBible */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56E327C3221E794700584C8F /* Build configuration list for PBXNativeTarget "SpontaneousBibleVerses" */;
+			buildConfigurationList = 56E327C3221E794700584C8F /* Build configuration list for PBXNativeTarget "ReviveBible" */;
 			buildPhases = (
 				56E32797221E794300584C8F /* Sources */,
 				56E32798221E794300584C8F /* Frameworks */,
@@ -157,14 +157,14 @@
 			);
 			dependencies = (
 			);
-			name = SpontaneousBibleVerses;
+			name = ReviveBible;
 			productName = SpontaneousBibleVerses;
-			productReference = 56E3279B221E794300584C8F /* SpontaneousBibleVerses.app */;
+			productReference = 56E3279B221E794300584C8F /* ReviveBible.app */;
 			productType = "com.apple.product-type.application";
 		};
-		56E327AE221E794700584C8F /* SpontaneousBibleVersesTests */ = {
+		56E327AE221E794700584C8F /* ReviveBibleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56E327C6221E794700584C8F /* Build configuration list for PBXNativeTarget "SpontaneousBibleVersesTests" */;
+			buildConfigurationList = 56E327C6221E794700584C8F /* Build configuration list for PBXNativeTarget "ReviveBibleTests" */;
 			buildPhases = (
 				56E327AB221E794700584C8F /* Sources */,
 				56E327AC221E794700584C8F /* Frameworks */,
@@ -175,14 +175,14 @@
 			dependencies = (
 				56E327B1221E794700584C8F /* PBXTargetDependency */,
 			);
-			name = SpontaneousBibleVersesTests;
+			name = ReviveBibleTests;
 			productName = SpontaneousBibleVersesTests;
-			productReference = 56E327AF221E794700584C8F /* SpontaneousBibleVersesTests.xctest */;
+			productReference = 56E327AF221E794700584C8F /* ReviveBibleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		56E327B9221E794700584C8F /* SpontaneousBibleVersesUITests */ = {
+		56E327B9221E794700584C8F /* ReviveBibleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56E327C9221E794700584C8F /* Build configuration list for PBXNativeTarget "SpontaneousBibleVersesUITests" */;
+			buildConfigurationList = 56E327C9221E794700584C8F /* Build configuration list for PBXNativeTarget "ReviveBibleUITests" */;
 			buildPhases = (
 				56E327B6221E794700584C8F /* Sources */,
 				56E327B7221E794700584C8F /* Frameworks */,
@@ -193,9 +193,9 @@
 			dependencies = (
 				56E327BC221E794700584C8F /* PBXTargetDependency */,
 			);
-			name = SpontaneousBibleVersesUITests;
+			name = ReviveBibleUITests;
 			productName = SpontaneousBibleVersesUITests;
-			productReference = 56E327BA221E794700584C8F /* SpontaneousBibleVersesUITests.xctest */;
+			productReference = 56E327BA221E794700584C8F /* ReviveBibleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 56E32796221E794300584C8F /* Build configuration list for PBXProject "SpontaneousBibleVerses" */;
+			buildConfigurationList = 56E32796221E794300584C8F /* Build configuration list for PBXProject "ReviveBible" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -234,9 +234,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56E3279A221E794300584C8F /* SpontaneousBibleVerses */,
-				56E327AE221E794700584C8F /* SpontaneousBibleVersesTests */,
-				56E327B9221E794700584C8F /* SpontaneousBibleVersesUITests */,
+				56E3279A221E794300584C8F /* ReviveBible */,
+				56E327AE221E794700584C8F /* ReviveBibleTests */,
+				56E327B9221E794700584C8F /* ReviveBibleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,12 +302,12 @@
 /* Begin PBXTargetDependency section */
 		56E327B1221E794700584C8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56E3279A221E794300584C8F /* SpontaneousBibleVerses */;
+			target = 56E3279A221E794300584C8F /* ReviveBible */;
 			targetProxy = 56E327B0221E794700584C8F /* PBXContainerItemProxy */;
 		};
 		56E327BC221E794700584C8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56E3279A221E794300584C8F /* SpontaneousBibleVerses */;
+			target = 56E3279A221E794300584C8F /* ReviveBible */;
 			targetProxy = 56E327BB221E794700584C8F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -501,7 +501,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpontaneousBibleVerses.app/SpontaneousBibleVerses";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReviveBible.app/ReviveBible";
 			};
 			name = Debug;
 		};
@@ -522,7 +522,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpontaneousBibleVerses.app/SpontaneousBibleVerses";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReviveBible.app/ReviveBible";
 			};
 			name = Release;
 		};
@@ -569,7 +569,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56E32796221E794300584C8F /* Build configuration list for PBXProject "SpontaneousBibleVerses" */ = {
+		56E32796221E794300584C8F /* Build configuration list for PBXProject "ReviveBible" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56E327C1221E794700584C8F /* Debug */,
@@ -578,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56E327C3221E794700584C8F /* Build configuration list for PBXNativeTarget "SpontaneousBibleVerses" */ = {
+		56E327C3221E794700584C8F /* Build configuration list for PBXNativeTarget "ReviveBible" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56E327C4221E794700584C8F /* Debug */,
@@ -587,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56E327C6221E794700584C8F /* Build configuration list for PBXNativeTarget "SpontaneousBibleVersesTests" */ = {
+		56E327C6221E794700584C8F /* Build configuration list for PBXNativeTarget "ReviveBibleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56E327C7221E794700584C8F /* Debug */,
@@ -596,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56E327C9221E794700584C8F /* Build configuration list for PBXNativeTarget "SpontaneousBibleVersesUITests" */ = {
+		56E327C9221E794700584C8F /* Build configuration list for PBXNativeTarget "ReviveBibleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56E327CA221E794700584C8F /* Debug */,
