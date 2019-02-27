@@ -14,6 +14,9 @@
 		56E327A9221E794700584C8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E327A7221E794700584C8F /* LaunchScreen.storyboard */; };
 		56E327B4221E794700584C8F /* SpontaneousBibleVersesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E327B3221E794700584C8F /* SpontaneousBibleVersesTests.swift */; };
 		56E327BF221E794700584C8F /* SpontaneousBibleVersesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E327BE221E794700584C8F /* SpontaneousBibleVersesUITests.swift */; };
+		56E327CD2223A0A600584C8F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E327CC2223A0A600584C8F /* Constants.swift */; };
+		56E327D02223A21B00584C8F /* Verse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E327CF2223A21B00584C8F /* Verse.swift */; };
+		56E327D2222503E900584C8F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E327D1222503E900584C8F /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		56E327BA221E794700584C8F /* SpontaneousBibleVersesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpontaneousBibleVersesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E327BE221E794700584C8F /* SpontaneousBibleVersesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpontaneousBibleVersesUITests.swift; sourceTree = "<group>"; };
 		56E327C0221E794700584C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56E327CC2223A0A600584C8F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		56E327CF2223A21B00584C8F /* Verse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verse.swift; sourceTree = "<group>"; };
+		56E327D1222503E900584C8F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,11 @@
 		56E3279D221E794300584C8F /* SpontaneousBibleVerses */ = {
 			isa = PBXGroup;
 			children = (
+				56E327CE2223A20F00584C8F /* Model */,
 				56E3279E221E794300584C8F /* AppDelegate.swift */,
+				56E327CC2223A0A600584C8F /* Constants.swift */,
 				56E327A0221E794300584C8F /* ViewController.swift */,
+				56E327D1222503E900584C8F /* HTTPClient.swift */,
 				56E327A2221E794300584C8F /* Main.storyboard */,
 				56E327A5221E794700584C8F /* Assets.xcassets */,
 				56E327A7221E794700584C8F /* LaunchScreen.storyboard */,
@@ -123,6 +132,14 @@
 				56E327C0221E794700584C8F /* Info.plist */,
 			);
 			path = SpontaneousBibleVersesUITests;
+			sourceTree = "<group>";
+		};
+		56E327CE2223A20F00584C8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56E327CF2223A21B00584C8F /* Verse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E327A1221E794300584C8F /* ViewController.swift in Sources */,
+				56E327D2222503E900584C8F /* HTTPClient.swift in Sources */,
 				56E3279F221E794300584C8F /* AppDelegate.swift in Sources */,
+				56E327CD2223A0A600584C8F /* Constants.swift in Sources */,
+				56E327D02223A21B00584C8F /* Verse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
