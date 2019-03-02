@@ -26,7 +26,7 @@ class HTTPClient {
 //        task.resume()
 //    }
 
-    func fetchVerseObjectFrom(fromVerse verse: String, callback: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+    func makeUrlRequest(forVerse verse: String, callback: @escaping (_ data: Data?, _ error: Error?) -> Void) {
 
         guard let verseUrl = URL(string: Constants.baesApiUrlString + verse) else {
             print("Could not create URL from baseApiUrl string")
