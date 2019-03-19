@@ -10,22 +10,6 @@ import Foundation
 
 class HTTPClient {
 
-//    private var urlSession: URLSession?
-//
-//    func get(urlString: String, apiKey: String, callback: @escaping (_ data: Data?, _ error: Error?) -> Void ) {
-//        guard let link = URL(string: urlString) else {
-//            let error = NSError(domain: "URL Error", code: 1, userInfo: nil)
-//            callback(nil, error)
-//            return
-//        }
-//        var request = URLRequest(url: link)
-//        request.setValue(apiKey, forHTTPHeaderField: "api-key")
-//        let task = session.dataTask(with: request) {(data, response, error) in
-//            callback(data, error)
-//        }
-//        task.resume()
-//    }
-
     func makeUrlRequest(forVerse verse: String, callback: @escaping (_ data: Data?, _ error: Error?) -> Void) {
 
         guard let verseUrl = URL(string: Constants.baesApiUrlString + verse) else {

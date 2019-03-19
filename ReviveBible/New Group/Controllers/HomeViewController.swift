@@ -8,15 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     var verses: [Verse] = []
-    
+    let homeContainerView = HomeContainerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+
+        layoutUI()
         let verseStrings = ["MAT.11.1", "MAT.11.2", "ROM.12.2"]
         fetchVerses(from: verseStrings)
         let timeRange = buildTimeRangeFromComponents()
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         let endTime = timeRange.1
         generateRandomTimes(from: startTime, to: endTime)
     }
-    
+
     private func buildTimeRangeFromComponents() -> (Date, Date) {
         let calendar = Calendar(identifier: .gregorian)
         var startTimeComponents = DateComponents()
@@ -52,10 +52,24 @@ class ViewController: UIViewController {
                 guard let data = data else { return }
                 guard let decodedVerse = try? JSONDecoder().decode(Verse.self, from: data) else { return }
                 self.verses.append(decodedVerse)
-                // printVerses // REFRESH UI
-                // printVerses(verses: verses)
+                DispatchQueue.main.async {
+                    self.homeContainerView.verseToDisplay = decodedVerse.content
+                }
             }
         }
+    }
+
+    // TODO: - REFACTOR
+
+    func layoutUI() {
+        self.view.addSubview(homeContainerView)
+        NSLayoutConstraint.activate([
+            homeContainerView.topAnchor.constraint(equalTo: view.topAnchor),
+            homeContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            homeContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            homeContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+        homeContainerView.delegate = self
     }
     
     private func generateRandomTimes(from startTime: Date, to endTime: Date) {
@@ -63,7 +77,6 @@ class ViewController: UIViewController {
         let randomAmountOfOccurences = Int.random(in: 2..<6)
         for _ in 0..<randomAmountOfOccurences {
             let randomOffset = Double.random(in: 0..<timeWindow)
-            print(randomOffset)
             let randomDate = Date(timeInterval: randomOffset, since: startTime)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMMM dd EEEE hh:mm a"
@@ -79,3 +92,14 @@ class ViewController: UIViewController {
         }
     }
 }
+
+extension HomeViewController: HomeContainerViewDelegate {
+
+    func handleSettingsButtonPressed() {
+        let settingsViewController = SettingsViewController()
+        present(settingsViewController, animated: true, completion: nil)
+    }
+}
+
+
+
