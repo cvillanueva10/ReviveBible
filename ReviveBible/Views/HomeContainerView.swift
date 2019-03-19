@@ -27,12 +27,21 @@ class HomeContainerView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    // TODO: Rename and Repurpose
+    private lazy var responseButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Response", for: .normal)
+        button.addTarget(self, action: #selector(handleResponsePressed), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     weak var delegate: HomeContainerViewDelegate?
 
     private let mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fill
         stackView.axis = .vertical
+        stackView.spacing = 16
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -40,8 +49,9 @@ class HomeContainerView: UIView {
     init() {
         self.verseTextView = VerseTextView()
         verseTextView.centerVertically()
-        self.mainStackView.addArrangedSubview(verseTextView)
+        mainStackView.addArrangedSubview(verseTextView)
         super.init(frame: .zero)
+        mainStackView.addArrangedSubview(responseButton)
         self.backgroundColor = .blue
         self.translatesAutoresizingMaskIntoConstraints = false
         layoutViews()
@@ -58,6 +68,12 @@ class HomeContainerView: UIView {
             mainStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             mainStackView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
             ])
+    }
+    
+    // TODO: Rename and Repurpose
+    @objc func handleResponsePressed() {
+        // TODO: Implement functionality
+        print(123)
     }
 
     @objc func handleSettingsPressed() {
