@@ -6,4 +6,12 @@
 //  Copyright © 2019 Christopher Villanueva. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class BibleViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .purple
+    }
+}

@@ -6,4 +6,17 @@
 //  Copyright © 2019 Christopher Villanueva. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MainTabBarController: UITabBarController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let homeViewController = HomeViewController()
+        homeViewController.title = "Home"
+        let bibleViewController = BibleViewController()
+        bibleViewController.title = "Bible"
+        viewControllers = [homeViewController, bibleViewController]
+        
+    }
+}

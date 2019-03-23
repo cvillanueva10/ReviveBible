@@ -20,6 +20,8 @@
 		56E327D2222503E900584C8F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E327D1222503E900584C8F /* HTTPClient.swift */; };
 		58024651222B1ED700E3780D /* ReviveBibleTests in Resources */ = {isa = PBXBuildFile; fileRef = 5802464F222B1ED600E3780D /* ReviveBibleTests */; };
 		58024652222B1ED700E3780D /* ReviveBibleUITests in Resources */ = {isa = PBXBuildFile; fileRef = 58024650222B1ED600E3780D /* ReviveBibleUITests */; };
+		589EEBA72240AB24005EB73B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EEBA62240AB24005EB73B /* MainTabBarController.swift */; };
+		589EEBA92240ABAC005EB73B /* BibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EEBA82240ABAC005EB73B /* BibleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		56E327D1222503E900584C8F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		5802464F222B1ED600E3780D /* ReviveBibleTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReviveBibleTests; sourceTree = "<group>"; };
 		58024650222B1ED600E3780D /* ReviveBibleUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReviveBibleUITests; sourceTree = "<group>"; };
+		589EEBA62240AB24005EB73B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		589EEBA82240ABAC005EB73B /* BibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,9 @@
 		5631F5BC222CE72400EBA33E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				589EEBA82240ABAC005EB73B /* BibleViewController.swift */,
 				56E327A0221E794300584C8F /* HomeViewController.swift */,
+				589EEBA62240AB24005EB73B /* MainTabBarController.swift */,
 				5631F5C12236118600EBA33E /* SettingsViewController.swift */,
 			);
 			name = Controllers;
@@ -283,12 +289,14 @@
 			files = (
 				56E327A1221E794300584C8F /* HomeViewController.swift in Sources */,
 				5631F5C0222CE98F00EBA33E /* HomeContainerView.swift in Sources */,
+				589EEBA72240AB24005EB73B /* MainTabBarController.swift in Sources */,
 				56E327D2222503E900584C8F /* HTTPClient.swift in Sources */,
 				56E3279F221E794300584C8F /* AppDelegate.swift in Sources */,
 				56E327CD2223A0A600584C8F /* Constants.swift in Sources */,
 				56E327D02223A21B00584C8F /* Verse.swift in Sources */,
 				5631F5BE222CE77600EBA33E /* VerseTextView.swift in Sources */,
 				5631F5C22236118600EBA33E /* SettingsViewController.swift in Sources */,
+				589EEBA92240ABAC005EB73B /* BibleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

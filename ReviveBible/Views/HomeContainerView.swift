@@ -59,13 +59,12 @@ class HomeContainerView: UIView {
 
     func layoutViews() {
         addSubview(settingsButton)
-
         addSubview(mainStackView)
         NSLayoutConstraint.activate([
             settingsButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
             settingsButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
             mainStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            mainStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            mainStackView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -32),
             mainStackView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
             ])
     }
