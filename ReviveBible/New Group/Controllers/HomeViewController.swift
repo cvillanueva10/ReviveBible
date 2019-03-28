@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
         let httpClient = HTTPClient()
         for verse in verseStrings {
             let verseUrl = verse
-            httpClient.makeUrlRequest(forVerse: verseUrl) { (data, error) in
+            httpClient.buildUrlRequest(forVerse: verseUrl) { (data, error) in
                 if let error = error {
                     NSLog("Error: \(error)")
                     return

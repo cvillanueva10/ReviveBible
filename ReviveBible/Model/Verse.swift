@@ -9,7 +9,7 @@
 import Foundation
 
 struct Verse: Codable {
-    var data: VerseContent
+    var data: VerseData
     var bibleId: String {
         return data.bibleId
     }
@@ -24,9 +24,9 @@ struct Verse: Codable {
     }
 }
 
-struct VerseContent: Codable {
-    var bibleId: String
-    var bookId: String
-    var chapterId: String
-    var content: String
+struct VerseData: Codable {
+    let bibleId: String
+    let bookId: String
+    let chapterId: String
+    let content: String
 }
