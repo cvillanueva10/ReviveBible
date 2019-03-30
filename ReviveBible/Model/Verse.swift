@@ -8,8 +8,19 @@
 
 import Foundation
 
+enum VerseEnum: String, BaseEnum {
+    case Matthew_11_1 = "MAT.11.1"
+    case Matthew_11_2 = "MAT.11.2"
+    case Romans_12_2 = "ROM.12.2"
+
+    var urlSuffix: String {
+        return "verses/" + self.rawValue
+    }
+
+}
+
 struct Verse: Codable {
-    var data: VerseContent
+    var data: VerseData
     var bibleId: String {
         return data.bibleId
     }
@@ -24,9 +35,9 @@ struct Verse: Codable {
     }
 }
 
-struct VerseContent: Codable {
-    var bibleId: String
-    var bookId: String
-    var chapterId: String
-    var content: String
+struct VerseData: Codable {
+    let bibleId: String
+    let bookId: String
+    let chapterId: String
+    let content: String
 }

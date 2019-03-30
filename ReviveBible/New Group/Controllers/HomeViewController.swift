@@ -17,8 +17,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         layoutUI()
-        let verseStrings = ["MAT.11.1", "MAT.11.2", "ROM.12.2"]
-        fetchVerses(from: verseStrings)
+        let verseEnums: [VerseEnum] = [.Matthew_11_1, .Matthew_11_2, .Romans_12_2]
+        fetchVerses(from: verseEnums)
+        fetchChapter(from: .Genesis_1)
         let timeRange = buildTimeRangeFromComponents()
         let startTime = timeRange.0
         let endTime = timeRange.1
@@ -39,12 +40,29 @@ class HomeViewController: UIViewController {
         }
         return (startTime, endTime)
     }
-    
-    func fetchVerses(from verseStrings: [String]){
+
+    // TODO: - Refactor this out, this is just for testing
+
+    func fetchChapter(from chapter: ChapterEnum) {
         let httpClient = HTTPClient()
-        for verse in verseStrings {
-            let verseUrl = verse
-            httpClient.makeUrlRequest(forVerse: verseUrl) { (data, error) in
+        httpClient.buildUrlRequest(for: chapter) { (data, error) in
+            if let error = error {
+                NSLog("Error: \(error)")
+                return
+            }
+            guard let data = data else { return }
+            guard let decodedChapter = try? JSONDecoder().decode(Chapter.self, from: data) else { return }
+            DispatchQueue.main.async {
+                self.homeContainerView.verseToDisplay = decodedChapter.content
+            }
+        }
+
+    }
+    
+    func fetchVerses(from verses: [VerseEnum]){
+        let httpClient = HTTPClient()
+        for verse in verses {
+            httpClient.buildUrlRequest(for: verse) { (data, error) in
                 if let error = error {
                     NSLog("Error: \(error)")
                     return
@@ -100,6 +118,7 @@ extension HomeViewController: HomeContainerViewDelegate {
         present(settingsViewController, animated: true, completion: nil)
     }
 }
+
 
 
 
