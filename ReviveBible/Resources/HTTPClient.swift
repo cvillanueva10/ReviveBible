@@ -8,33 +8,21 @@
 
 import Foundation
 
+protocol BaseEnum {
+    var urlSuffix: String {get}
+}
+
 class HTTPClient {
 
-    enum RequestType {
-        case verse
-        case chapter
-    }
+    let settings = Settings.shared
 
-    private func buildBaseUrlString(of type: RequestType) -> String {
-        let settings = Settings.shared
-        var baseUrlString = Constants.baseApiUrlString + settings.bibleVersionUrl.rawValue
-        switch type {
-        case .verse:
-            baseUrlString += Constants.versesUrlString
-        case .chapter:
-            baseUrlString += Constants.chaptersUrlString
-        }
-        return baseUrlString
-    }
-
-    func buildUrlRequest(forVerse verse: String, callback: @escaping (_ data: Data?, _ error: Error?) -> Void) {
-
-        let baseUrlString = buildBaseUrlString(of: .verse)
-        guard let verseUrl = URL(string: baseUrlString + verse) else {
+    func buildUrlRequest(for scripture: BaseEnum, callback: @escaping (_ data: Data?, _ error: Error?) -> Void) {
+        let urlString = Constants.baseApiUrlString + settings.bibleVersionUrl.description + scripture.urlSuffix
+        guard let url = URL(string: urlString) else {
             print("Could not create URL from string")
             return
         }
-        var urlRequest = URLRequest(url: verseUrl)
+        var urlRequest = URLRequest(url: url)
         urlRequest.setValue(Constants.apiKey, forHTTPHeaderField: "api-key")
         send(urlRequest, with: callback)
     }
@@ -51,7 +39,4 @@ class HTTPClient {
         }
         task.resume()
     }
-
-
-
 }

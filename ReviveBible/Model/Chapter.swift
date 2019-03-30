@@ -8,22 +8,27 @@
 
 import Foundation
 
-enum Chapters: String {
-    case genOne = "GEN.1"
-    case genTwo = "GEN.2"
+enum ChapterEnum: String, BaseEnum {
+    case Genesis_1 = "GEN.1"
+    case Genesis_2 = "GEN.2"
+
+    var urlSuffix: String {
+        return  "chapters/" + self.rawValue
+    }
 }
 
 struct Chapter: Codable {
-    let chapterData: ChapterData
+    let data: ChapterData
     var bookId: String {
-        return chapterData.bookId
+        return data.bookId
     }
     var reference: String {
-        return chapterData.reference
+        return data.reference
     }
     var content: String {
-        return chapterData.content
+        return data.content
     }
+
 }
 
 struct ChapterData: Codable {

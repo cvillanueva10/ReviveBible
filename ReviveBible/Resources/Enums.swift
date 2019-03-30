@@ -15,6 +15,11 @@ enum Constants {
     static let chaptersUrlString = "chapters/"
 }
 
-enum BibleVersionUrls: String {
+enum BibleVersion: String, CustomStringConvertible {
+
     case kingJames = "de4e12af7f28f599-01/"
+
+    var description: String {
+        return self.rawValue
+    }
 }

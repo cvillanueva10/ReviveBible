@@ -11,12 +11,11 @@ import Foundation
 class Settings {
 
     static let shared = Settings()
-
-    private(set) var bibleVersionUrl: BibleVersionUrls = .kingJames
+    private(set) var bibleVersionUrl: BibleVersion = .kingJames 
 
     private init() { }
 
-    func setBibleVersionUrl(as versionUrl: BibleVersionUrls) {
+    func setBibleVersionUrl(as versionUrl: BibleVersion) {
         self.bibleVersionUrl = versionUrl
     }
 
