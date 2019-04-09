@@ -11,7 +11,7 @@ import Foundation
 class Settings {
 
     static let shared = Settings()
-    private(set) var bibleVersionUrl: BibleVersion = .kingJames 
+    private(set) var bibleVersionUrl: BibleVersion = .americanStandard
 
     private init() { }
 

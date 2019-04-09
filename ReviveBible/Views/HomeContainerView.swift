@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSoup
 
 protocol HomeContainerViewDelegate: class {
     func handleSettingsButtonPressed()
@@ -16,13 +17,26 @@ class HomeContainerView: UIView {
 
     var verseToDisplay: String = "" {
         didSet {
-            self.verseTextView.text = verseToDisplay
+            do {
+                let doc: Document = try SwiftSoup.parse(verseToDisplay)
+                let text: String = try doc.body()!.text()
+                let paragraph = NSMutableParagraphStyle()
+                paragraph.alignment = .center
+                let attributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline),
+                                  NSAttributedString.Key.paragraphStyle: paragraph]
+                let attributedText = NSAttributedString(string: text,
+                                                        attributes: attributes)
+                self.verseTextView.attributedText = attributedText
+            } catch let error {
+                print(error)
+            }
         }
     }
     private var verseTextView: VerseTextView
     private lazy var settingsButton: UIButton = {
         let button = UIButton()
         button.setTitle("Settings", for: .normal)
+        button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(handleSettingsPressed), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -52,8 +66,8 @@ class HomeContainerView: UIView {
         mainStackView.addArrangedSubview(verseTextView)
         super.init(frame: .zero)
         mainStackView.addArrangedSubview(responseButton)
-        self.backgroundColor = .blue
-        self.translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = .white
+        translatesAutoresizingMaskIntoConstraints = false
         layoutViews()
     }
 

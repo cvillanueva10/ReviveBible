@@ -12,6 +12,7 @@
 		5631F5C22236118600EBA33E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5631F5C12236118600EBA33E /* SettingsViewController.swift */; };
 		568D8E442245FF3300952D02 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568D8E432245FF3300952D02 /* Chapter.swift */; };
 		568D8E462249DB7200952D02 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568D8E452249DB7200952D02 /* Settings.swift */; };
+		568D8E4C2250891700952D02 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568D8E4B2250891700952D02 /* SwiftSoup.framework */; };
 		56E3279F221E794300584C8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E3279E221E794300584C8F /* AppDelegate.swift */; };
 		56E327A1221E794300584C8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E327A0221E794300584C8F /* HomeViewController.swift */; };
 		56E327A4221E794300584C8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E327A2221E794300584C8F /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		5631F5C12236118600EBA33E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		568D8E432245FF3300952D02 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		568D8E452249DB7200952D02 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		568D8E4B2250891700952D02 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		56E3279B221E794300584C8F /* ReviveBible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviveBible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E3279E221E794300584C8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56E327A0221E794300584C8F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568D8E4C2250891700952D02 /* SwiftSoup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +125,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		568D8E4A2250891700952D02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				568D8E4B2250891700952D02 /* SwiftSoup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56E32792221E794300584C8F = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +140,7 @@
 				5802464F222B1ED600E3780D /* ReviveBibleTests */,
 				58024650222B1ED600E3780D /* ReviveBibleUITests */,
 				56E3279C221E794300584C8F /* Products */,
+				568D8E4A2250891700952D02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +190,7 @@
 				56E32797221E794300584C8F /* Sources */,
 				56E32798221E794300584C8F /* Frameworks */,
 				56E32799221E794300584C8F /* Resources */,
+				560EF7B7225089F700F4D62F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -295,6 +308,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		560EF7B7225089F700F4D62F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftSoup.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftSoup.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56E32797221E794300584C8F /* Sources */ = {
@@ -486,13 +521,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FAX6D99283;
+				DEVELOPMENT_TEAM = BMLYZWR33S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ReviveBible/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrisvillanueva.SpontaneousBibleVerses;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisvillanueva.ReviveBible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,13 +543,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FAX6D99283;
+				DEVELOPMENT_TEAM = BMLYZWR33S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ReviveBible/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrisvillanueva.SpontaneousBibleVerses;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisvillanueva.ReviveBible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

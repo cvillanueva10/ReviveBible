@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReviveBible/Resources/HTTPClient.swift"
-            timestampString = "575677910.366522"
+            timestampString = "575679812.203771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "buildUrlRequest(for:callback:)"
-            landmarkType = "7">
+            landmarkName = "HTTPClient"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReviveBible/New Group/Controllers/HomeViewController.swift"
-            timestampString = "575677910.366626"
+            timestampString = "575705834.251196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "fetchChapter(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReviveBible/New Group/Controllers/HomeViewController.swift"
-            timestampString = "575677910.36668"
+            timestampString = "575705834.251315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "fetchVerses(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReviveBible/New Group/Controllers/HomeViewController.swift"
-            timestampString = "575677910.3667279"
+            timestampString = "575705834.251429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "fetchChapter(from:)"
             landmarkType = "7">
             <Locations>
@@ -90,11 +90,11 @@
                   moduleName = "ReviveBible"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/christophervillanueva/Desktop/iOS/Projects/ReviveBible/ReviveBible/New%20Group/Controllers/HomeViewController.swift"
-                  timestampString = "575677910.506178"
+                  timestampString = "575703232.786499"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
                   offsetFromSymbolStart = "59">
                </Location>
                <Location
@@ -105,11 +105,11 @@
                   moduleName = "ReviveBible"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/christophervillanueva/Desktop/iOS/Projects/ReviveBible/ReviveBible/New%20Group/Controllers/HomeViewController.swift"
-                  timestampString = "575677910.508733"
+                  timestampString = "575703232.790964"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
                   offsetFromSymbolStart = "71">
                </Location>
             </Locations>

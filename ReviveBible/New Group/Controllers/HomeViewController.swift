@@ -15,12 +15,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         layoutUI()
-        let verseEnums: [VerseEnum] = [.Matthew_11_1, .Matthew_11_2, .Romans_12_2]
+        let verseEnums: [VerseEnum] = [.First_Corinthians_13_4]
         fetchVerses(from: verseEnums)
-        fetchChapter(from: .Genesis_1)
-        let timeRange = buildTimeRangeFromComponents()
+        let timeRange: (Date, Date) = buildTimeRangeFromComponents()
         let startTime = timeRange.0
         let endTime = timeRange.1
         generateRandomTimes(from: startTime, to: endTime)
@@ -56,7 +54,6 @@ class HomeViewController: UIViewController {
                 self.homeContainerView.verseToDisplay = decodedChapter.content
             }
         }
-
     }
     
     func fetchVerses(from verses: [VerseEnum]){
@@ -118,7 +115,4 @@ extension HomeViewController: HomeContainerViewDelegate {
         present(settingsViewController, animated: true, completion: nil)
     }
 }
-
-
-
 

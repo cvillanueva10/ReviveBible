@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol BaseEnum {
-    var urlSuffix: String {get}
-}
-
 class HTTPClient {
 
     let settings = Settings.shared

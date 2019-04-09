@@ -12,11 +12,10 @@ enum VerseEnum: String, BaseEnum {
     case Matthew_11_1 = "MAT.11.1"
     case Matthew_11_2 = "MAT.11.2"
     case Romans_12_2 = "ROM.12.2"
-
+    case First_Corinthians_13_4 = "1CO.13.4"
     var urlSuffix: String {
         return "verses/" + self.rawValue
     }
-
 }
 
 struct Verse: Codable {
